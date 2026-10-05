@@ -344,12 +344,12 @@ Sistem ini menerapkan Interface pada dua bagian utama. Pertama, interface Pengel
 
 Struktur program dibagi menjadi beberapa package dan class sesuai dengan fungsinya.
 
-1. MainApp digunakan sebagai titik awal program dan menampilkan menu utama.
+1. MainApp digunakan sebagai titik awal untuk memulai program.
 
-2. LesPrivatController digunakan sebagai penghubung antara MainApp dengan proses pada LayananLesPrivat.
+2. LesPrivatController digunakan sebagai penghubung dan pengatur alur logika antara menu, validasi input, serta proses layanan.
 
-3. LayananLesPrivat digunakan untuk mengelola proses CRUD dan menyimpan data pada ArrayList.
+3. LayananLesPrivat digunakan untuk mengelola proses CRUD, validasi duplikasi ID, dan penyimpanan data menggunakan ArrayList.
 
-4. Pengguna digunakan sebagai superclass untuk Siswa dan Tutor.
+4. Pengguna bertindak sebagai abstract class (implements CetakInfo) yang menjadi superclass bagi Siswa dan Tutor.
 
-5. Siswa, Tutor, dan Jadwal digunakan sebagai class yang membentuk data utama dalam sistem.
+5. Siswa, Tutor, dan Jadwal digunakan sebagai class entity pembentuk data utama, di mana Jadwal juga ikut mengimplementasikan interface CetakInfo.
