@@ -248,6 +248,8 @@ b. Pada class Tutor, atribut keahlian dan noTelepon juga dibuat private. Program
 
 <img width="604" height="302" alt="image" src="https://github.com/user-attachments/assets/b179c971-68dd-46c0-9646-4883dfe30b62" />
 
+<img width="414" height="151" alt="image" src="https://github.com/user-attachments/assets/b9c748dc-63c7-43ac-934c-890045e02019" />
+
 c. Pada class Jadwal, atribut idJadwal, idSiswa, idTutor, hari, dan jam dibuat private. Masing-masing atribut memiliki getter dan setter yang digunakan ketika data dibutuhkan atau diperbarui.
 
 <img width="608" height="242" alt="image" src="https://github.com/user-attachments/assets/22c00fc2-7ef3-497a-83d4-4d198f38849a" />
@@ -255,6 +257,11 @@ c. Pada class Jadwal, atribut idJadwal, idSiswa, idTutor, hari, dan jam dibuat p
 d. Penerapan encapsulation juga dapat dilihat pada proses Update Data. Program tidak mengubah atribut secara langsung, tetapi menggunakan setter seperti setNama(), setJenjang(), setMataPelajaran(), setKeahlian(), setNoTelepon(), setIdSiswa(), setIdTutor(), setHari(), dan setJam().
 
 <img width="580" height="239" alt="image" src="https://github.com/user-attachments/assets/d4f051f2-1477-41c6-b805-63a7a47ad2c1" />
+
+<img width="562" height="165" alt="image" src="https://github.com/user-attachments/assets/1e6fdc77-47bf-47ab-82f8-241678e1feb7" />
+
+<img width="548" height="329" alt="image" src="https://github.com/user-attachments/assets/9838faa8-28d1-457c-8c98-beca2691caca" />
+
 
 Dengan cara tersebut, data yang dimiliki oleh setiap object dikelola melalui method yang sudah disediakan pada class masing-masing. Hal ini juga membuat proses pengambilan dan perubahan data menjadi lebih teratur.
 
