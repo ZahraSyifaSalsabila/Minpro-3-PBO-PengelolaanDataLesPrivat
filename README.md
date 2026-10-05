@@ -337,6 +337,7 @@ Sistem ini menerapkan Interface pada dua bagian utama. Pertama, interface Pengel
 <img width="305" height="115" alt="image" src="https://github.com/user-attachments/assets/95eb46a9-2f8b-44f0-b8ac-8e93bc944e7b" />
 
 **Interface PengelolaData pada package Controller:**
+
 <img width="297" height="81" alt="image" src="https://github.com/user-attachments/assets/392c45c1-bcc3-4f59-b5af-9d4db5593096" />
 
 ## Struktur Program
