@@ -280,7 +280,7 @@ b. Siswa memiliki data tambahan berupa jenjang dan mataPelajaran. Tutor memiliki
 
 c. Penerapan inheritance membuat data yang sama tidak perlu dibuat berulang pada class Siswa dan Tutor. Data yang bersifat umum ditempatkan pada Pengguna, sedangkan data yang bersifat khusus ditempatkan pada masing-masing subclass. Dengan susunan tersebut, hubungan antara Pengguna, Siswa, dan Tutor dapat terlihat dengan jelas dan struktur class dalam program menjadi lebih teratur.
 
-### 1. MVC
+## MVC
 Program menerapkan pemisahan package untuk mengatur bagian-bagian program berdasarkan fungsinya.
 
 **a. Package Model**
@@ -300,7 +300,7 @@ Package view berisi LesPrivatView yang bertanggung jawab penuh atas interaksi ko
 <img width="274" height="203" alt="image" src="https://github.com/user-attachments/assets/56ca0898-388f-48ae-bdd1-803db5285d7a" />
 
 
-### 2. Abstraction
+## Abstraction
 
 Abstraction diterapkan melalui pembuatan abstract class dan abstract method pada hierarki class Pengguna. Class Pengguna dideklarasikan sebagai abstract class Pengguna implements CetakInfo, yang berfungsi sebagai kerangka dasar dan tidak dapat diinstansiasi secara langsung menjadi object baru menggunakan keyword new. Di dalam class Pengguna, terdapat abstract method public abstract String getPeran(); dan public abstract void tampilkanInfo();. Method-method abstrak ini tidak memiliki implementasi di superclass, melainkan wajib di-override dan diimplementasikan secara konkret oleh setiap class turunannya, yaitu Siswa dan Tutor.
 
@@ -308,7 +308,7 @@ Abstraction diterapkan melalui pembuatan abstract class dan abstract method pada
 
 <img width="318" height="65" alt="image" src="https://github.com/user-attachments/assets/74c3e535-1da2-4067-8e93-02330412e7cc" />
 
-### 3. Polymorphism
+## Polymorphism
 
 Polymorphism pada program ini diterapkan dalam dua bentuk utama, yaitu Overriding dan Overloading. Overriding diimplementasikan melalui method tampilkanInfo() dan getPeran(). Pada abstract class Pengguna, method tampilkanInfo() dideklarasikan sebagai abstract, kemudian dioverride ulang di dalam class Siswa untuk menampilkan informasi ID, nama, jenjang, dan mata pelajaran, serta dioverride di class Tutor untuk menampilkan ID, nama, keahlian, dan nomor telepon sesuai atribut masing-masing subclass. Sementara itu, overloading diterapkan pada class Jadwal melalui dua bentuk method tampilkanInfo() dengan parameter yang berbeda, yakni tampilkanInfo() tanpa parameter dan tampilkanInfo(String namaSiswa, String namaTutor) dengan parameter untuk menerjemahkan ID menjadi nama lengkap. Overloading juga diterapkan pada class LesPrivatView melalui variasi method inputAngkaWajib()
 
@@ -323,6 +323,15 @@ Polymorphism pada program ini diterapkan dalam dua bentuk utama, yaitu Overridin
 **Overriding pada class tutor:**
 
 <img width="409" height="172" alt="image" src="https://github.com/user-attachments/assets/55f3596e-43db-4895-a473-f82688bc3146" />
+
+**Overloading pada class jadwal:**
+
+<img width="488" height="221" alt="image" src="https://github.com/user-attachments/assets/80ff859b-c5a1-42e4-85c1-bed9e3dfc227" />
+
+**Overloading pada class LesPrivatView melalui variasi method inputAngkaWajib():**
+
+<img width="481" height="21" alt="image" src="https://github.com/user-attachments/assets/4f82a3e6-fc1e-41ff-b789-c0d92c621fe3" />
+
 
 ## Penjelasan Penerapan Nilai Tambah (Interface)
 
