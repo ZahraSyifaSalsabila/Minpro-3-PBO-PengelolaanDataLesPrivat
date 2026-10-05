@@ -215,7 +215,6 @@ c. Program juga melakukan validasi terhadap ID siswa, tutor, dan jadwal. Setiap 
 
 <img width="196" height="80" alt="image" src="https://github.com/user-attachments/assets/812edfa4-775b-4162-9b62-a3019e55d120" />
 
-
 d. Validasi juga digunakan pada proses input menu. Jika pengguna memasukkan pilihan selain pilihan yang tersedia, program akan menampilkan pesan bahwa pilihan tidak ada sehingga pengguna dapat memilih kembali menu yang sesuai. Validasi tersebut digunakan pada proses tambah data, update data, dan bagian lain yang membutuhkan input dari pengguna. Dengan adanya validasi, kesalahan input dapat dikurangi dan program dapat tetap berjalan ketika pengguna memasukkan data yang tidak sesuai.
 
 **Contoh validasi proses input menu:**
@@ -225,16 +224,20 @@ d. Validasi juga digunakan pada proses input menu. Jika pengguna memasukkan pili
 
 ## Penerapan Encapsulation
 
-Encapsulation diterapkan dengan membuat atribut pada class menjadi private. Dengan menggunakan private, atribut tidak dapat diakses dan diubah secara langsung dari luar class. Pada class Pengguna, atribut id dan nama dibuat private. Kedua atribut tersebut memiliki getter untuk mengambil nilainya dan setter untuk mengubah nilainya.
+Encapsulation diterapkan dengan membuat atribut pada class menjadi private melalui penggunaan Access Modifier. Dengan menggunakan private, atribut tidak dapat diakses dan diubah secara langsung dari luar class. Pada class Pengguna, atribut id dan nama dibuat private. Kedua atribut tersebut memiliki getter untuk mengambil nilainya dan setter untuk mengubah nilainya.
+
+**Contoh pemberian Access Modifier pada class pengguna:**
+
+<img width="347" height="50" alt="image" src="https://github.com/user-attachments/assets/4364061d-f5d6-47f7-80c0-ac3014e0e0db" />
 
 a. Getter digunakan ketika program membutuhkan informasi yang tersimpan. Contohnya, ketika LayananLesPrivat ingin mencari siswa berdasarkan ID, program menggunakan getId(). Ketika program ingin mengambil nama siswa untuk ditampilkan pada jadwal, program menggunakan getNama().
 
 b. Setter digunakan ketika terdapat perubahan data. Contohnya, ketika pengguna melakukan Update Data Siswa, program menggunakan setNama(), setJenjang(), dan setMataPelajaran() untuk memasukkan informasi baru.
 
-### Encapsulation pada class
+### Encapsulation getter dan setter pada class
 a. Encapsulation juga diterapkan pada class Siswa. Atribut jenjang dan mataPelajaran dibuat private dan masing-masing memiliki getter dan setter. Dengan demikian, program dapat mengambil data menggunakan getJenjang() dan getMataPelajaran(), serta mengubahnya menggunakan setJenjang() dan setMataPelajaran().
 
-**Penerapan encapsulation pada siswa:**
+**Penerapan encapsulation  pada siswa:**
 
 <img width="582" height="370" alt="image" src="https://github.com/user-attachments/assets/6319dd32-bf4d-42f6-93c4-6d813e2c7ed4" />
 
@@ -245,16 +248,13 @@ b. Pada class Tutor, atribut keahlian dan noTelepon juga dibuat private. Program
 
 <img width="604" height="302" alt="image" src="https://github.com/user-attachments/assets/b179c971-68dd-46c0-9646-4883dfe30b62" />
 
-
 c. Pada class Jadwal, atribut idJadwal, idSiswa, idTutor, hari, dan jam dibuat private. Masing-masing atribut memiliki getter dan setter yang digunakan ketika data dibutuhkan atau diperbarui.
 
 <img width="608" height="242" alt="image" src="https://github.com/user-attachments/assets/22c00fc2-7ef3-497a-83d4-4d198f38849a" />
 
-
 d. Penerapan encapsulation juga dapat dilihat pada proses Update Data. Program tidak mengubah atribut secara langsung, tetapi menggunakan setter seperti setNama(), setJenjang(), setMataPelajaran(), setKeahlian(), setNoTelepon(), setIdSiswa(), setIdTutor(), setHari(), dan setJam().
 
 <img width="580" height="239" alt="image" src="https://github.com/user-attachments/assets/d4f051f2-1477-41c6-b805-63a7a47ad2c1" />
-
 
 Dengan cara tersebut, data yang dimiliki oleh setiap object dikelola melalui method yang sudah disediakan pada class masing-masing. Hal ini juga membuat proses pengambilan dan perubahan data menjadi lebih teratur.
 
@@ -264,7 +264,7 @@ Inheritance diterapkan dengan menggunakan class Pengguna sebagai superclass. Cla
 
 a. Class Siswa dan Tutor menjadi subclass dari Pengguna. Pada class Siswa digunakan hubungan: "public class Siswa extends Pengguna". Sedangkan pada class Tutor digunakan: "public class Tutor extends Pengguna". Dengan menggunakan extends, Siswa dan Tutor dapat menggunakan data dan method yang berasal dari Pengguna.
 
-**Penerapan Inheritence extends pada subclass siswa dan tutor:**
+**Penerapan Inheritence extends pada masing-masing subclass siswa dan tutor:**
 
 <img width="234" height="17" alt="image" src="https://github.com/user-attachments/assets/3ed3c9c4-5d6d-4912-8f81-4b51a60ad3c0" />
 
@@ -272,7 +272,7 @@ a. Class Siswa dan Tutor menjadi subclass dari Pengguna. Pada class Siswa diguna
 
 b. Siswa memiliki data tambahan berupa jenjang dan mataPelajaran. Tutor memiliki data tambahan berupa keahlian dan noTelepon. Jadi, data yang umum untuk keduanya diletakkan pada Pengguna, sedangkan data yang berbeda diletakkan pada masing-masing class. Pada constructor Siswa dan Tutor juga digunakan super(id, nama). Bagian tersebut digunakan untuk mengirim nilai ID dan nama ke constructor Pengguna ketika object Siswa atau Tutor dibuat. Contohnya, ketika program membuat data siswa baru, program tidak perlu membuat ulang bagian ID dan nama sebagai atribut baru di dalam Siswa. Siswa cukup menggunakan atribut yang sudah dimiliki dari Pengguna, kemudian menambahkan data khusus siswa berupa jenjang dan mata pelajaran. Hal yang sama berlaku pada Tutor. Tutor menggunakan ID dan nama dari Pengguna, kemudian memiliki tambahan berupa keahlian dan nomor telepon.
 
-**Tambahan atribut pada subclass siswa dan tutor:**
+**Tambahan atribut pada masing-masing subclass siswa dan tutor:**
 
 <img width="607" height="74" alt="image" src="https://github.com/user-attachments/assets/c03632d3-bdfa-44c3-8a61-1e56b4761ac7" />
 
@@ -287,13 +287,28 @@ Program menerapkan pemisahan package untuk mengatur bagian-bagian program berdas
 
 Package model berisi class Pengguna, Siswa, Tutor, dan Jadwal yang digunakan untuk membentuk data dalam program. Pengguna digunakan sebagai dasar data yang dimiliki oleh Siswa dan Tutor, Siswa digunakan untuk menyimpan data siswa, Tutor untuk menyimpan data tutor, dan Jadwal untuk menyimpan data jadwal les. Pembagian package tersebut membuat bagian untuk menjalankan program, mengelola proses, dan membentuk data menjadi lebih teratur.
 
+**Package Model:**
+
+<img width="251" height="86" alt="image" src="https://github.com/user-attachments/assets/a6ceed23-dff5-4d30-b3b9-9046bdee19da" />
+
+
 **b. Package Controller**
 
 Package Controller berisi class LesPrivatController dan LayananLesPrivat. LesPrivatController digunakan sebagai penghubung antara MainApp dengan LayananLesPrivat, sedangkan LayananLesPrivat berisi proses utama pengelolaan data seperti menambah, menampilkan, mengubah, dan menghapus data, serta melakukan pencarian nama siswa dan tutor dan validasi input.
 
+**Package Controller:**
+
+<img width="245" height="44" alt="image" src="https://github.com/user-attachments/assets/ee2841e2-59e5-4f37-a91d-be9e4680e772" />
+
+
 **c. Package View**
 
 Package view berisi LesPrivatView yang bertanggung jawab penuh atas interaksi konsol dan penerimaan input. Alur program berjalan melalui perulangan while di menu utama yang memproses pilihan pengguna lewat switch-case dan meneruskannya ke controller.
+
+**Package View:**
+
+<img width="239" height="32" alt="image" src="https://github.com/user-attachments/assets/9c9803a8-16c9-48c1-a6c8-a78f3f29a2ed" />
+
 
 **Screenshoot Struktur Folder:**
 
@@ -304,7 +319,11 @@ Package view berisi LesPrivatView yang bertanggung jawab penuh atas interaksi ko
 
 Abstraction diterapkan melalui pembuatan abstract class dan abstract method pada hierarki class Pengguna. Class Pengguna dideklarasikan sebagai abstract class Pengguna implements CetakInfo, yang berfungsi sebagai kerangka dasar dan tidak dapat diinstansiasi secara langsung menjadi object baru menggunakan keyword new. Di dalam class Pengguna, terdapat abstract method public abstract String getPeran(); dan public abstract void tampilkanInfo();. Method-method abstrak ini tidak memiliki implementasi di superclass, melainkan wajib di-override dan diimplementasikan secara konkret oleh setiap class turunannya, yaitu Siswa dan Tutor.
 
-**Abstraction pada class pengguna:**
+**Abstract class pada class pengguna:**
+
+<img width="352" height="50" alt="image" src="https://github.com/user-attachments/assets/dbdc21b9-f512-4782-b7f4-5e550e439399" />
+
+**Abstract method pada class pengguna:**
 
 <img width="318" height="65" alt="image" src="https://github.com/user-attachments/assets/74c3e535-1da2-4067-8e93-02330412e7cc" />
 
